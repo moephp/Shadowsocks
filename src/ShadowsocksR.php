@@ -6,7 +6,7 @@ namespace Shadowsocks;
 
 class ShadowsocksR
 {
-    const protocol = [
+    const Protocol = [
         // origin,verify_sha1,auth_sha1_v2,auth_sha1_v4,auth_aes128_md5,auth_aes128_sha1
         "origin",
         "verify_sha1",
@@ -16,7 +16,7 @@ class ShadowsocksR
         "auth_aes128_sha1"
     ];
 
-    const  plugin = [
+    const Obfs = [
         //  plain,http_simple,http_post,tls1.2_ticket_auth
         "plain",
         "http_simple_compatible",
