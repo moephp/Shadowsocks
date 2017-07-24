@@ -36,12 +36,13 @@ trait UtilTrait
      * @param int $uot
      * @return string
      */
-    public static function genSsrQrStr($server, $port, $pwd, $method, $protocol, $obfs, $obfsParam, $protoParam, $remark = '', $group = 'Default', $udp = 1, $uot = 0)
+    public static function genSsrQrStr($server, $port, $pwd, $method, $protocol, $obfs, $obfsParam, $protoParam, $remark = '', $group = 'Default', $udp = 0, $uot = 0)
     {
         $trimStr = '_compatible';
         $protocol = rtrim($protocol, $trimStr);
         $obfs = rtrim($obfs, $trimStr);
 
+        // &udpport=%s&uot=%s
         // ssr://base64(host:port:protocol:method:obfs:base64pass/?obfsparam=base64param&protoparam=base64param&remarks=base64remarks&group=base64group&udpport=0&uot=0)
         $format = "%s:%s:%s:%s:%s:%s/?obfsparam=%s&protoparam=%s&remarks=%s&group=%s&udpport=%s&uot=%s";
         $str = sprintf($format, $server, $port, $protocol, $method, $obfs, self::urlEncode($pwd), self::urlEncode($obfsParam), self::urlEncode($protoParam), self::urlEncode($remark), self::urlEncode($group), $udp, $uot);
@@ -55,6 +56,7 @@ trait UtilTrait
      */
     public static function urlEncode($input)
     {
-        return str_replace('=', '', strtr(base64_encode($input), '+/', '-_'));
+        $encoded = strtr(base64_encode($input), '+/', '-_');
+        return rtrim($encoded, '=');
     }
 }

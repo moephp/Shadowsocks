@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="ss-panel Test Suite" tests="1" assertions="0" errors="1" failures="0" skipped="0" time="0.000512">
+    <testsuite name="UtilTest" file="/Users/orvice/workspace/www/Pongtan/Shadowsocks/tests/UtilTest.php" tests="1" assertions="0" errors="1" failures="0" skipped="0" time="0.000512">
+      <testcase name="testSsrQrStr" class="UtilTest" classname="UtilTest" file="/Users/orvice/workspace/www/Pongtan/Shadowsocks/tests/UtilTest.php" line="7" assertions="0" time="0.000512">
+        <error type="PHPUnit\Framework\RiskyTestError">Risky Test
+</error>
+        <system-out>/Users/orvice/workspace/www/Pongtan/Shadowsocks/tests/UtilTest.php:22:
+string(237) "ssr://MTI3LjAuMC4xOjEyMzQ6YXV0aF9hZXMxMjhfbWQ1OmFlcy0xMjgtY2ZiOjpZV0ZoWW1KaS8_b2Jmc3BhcmFtPWRHeHpNUzR5WDNScFkydGxkRjloZFhSbyZwcm90b3BhcmFtPVluSmxZV3QzWVRFeExtMXZaUSZyZW1hcmtzPTVyV0w2Sy1WNUxpdDVwYUgmZ3JvdXA9WjNKdmRYQSZ1ZHBwb3J0PTAmdW90PTA"
+</system-out>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testsuites>
